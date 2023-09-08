@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Products System</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container overflow-auto py-3">
+        <form class="p-2">
+            <h1 class="text-center">Users</h1>
+            <label for="inputName">User Name:</label>
+            <input id="inputName" type="text" class="form-control my-1">
+
+            <label for="inputEmail">Email:</label>
+            <input id="inputEmail" type="email" class="form-control my-1">
+
+
+            <label for="inputStatus">Status:</label>
+            <select id="inputStatus" class="form-select mt-1 mb-3">
+                <option class="bg-success text-white" value="Active" selected>Active</option>
+                <option class="bg-danger text-white" value="Block">Block</option>
+            </select>
+
+            <div class="text-center w-100">
+                <button id="btnAdd" class="btn mb-5 btn-success text-white" type="button">Add User</button>
+
+            </div>
+
+        </form>
+        <table class="table table-striped text-center p-2">
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scripts/bootstrap.min.js"> </script>
+    <script src="JS/index.js"></script>
+</body>
+</html>
