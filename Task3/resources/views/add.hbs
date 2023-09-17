@@ -22,11 +22,9 @@
             {{!-- {{#unless isActive}} yes{{/unless}} --}}
             <select name="status"  class="form-control">
                 <option
-                    {{#if isActive}}
-                        selected
-                    {{/if}}
-                    >Active</option>
-                <option {{#unless isActive}} selected {{/unless}}>Deactive</option>
+                    value="active"
+                    >active</option>
+                <option   value="deactive">aeactive</option>
             </select>
         </div>
 

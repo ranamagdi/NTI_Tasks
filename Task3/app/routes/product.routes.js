@@ -1,20 +1,21 @@
 const router = require("express").Router()
-const userController = require("../controller/product.controller")
+const productController = require("../controller/product.controller")
 //post method
-router.get("/add", userController.add)
-router.post("/add", userController.addLogic)
+router.get("/add", productController.add)
+router.post("/add", productController.addLogic)
 
 //all users
-router.get("/", userController.showAll)
+router.get("/", productController.showAll)
 //single user
-router.get("/show/:productId", userController.showSingle)
+router.get("/show/:productId", productController.showSingle)
 //edit user
-router.get("/edit/:productId", userController.edit)
-router.post("/edit/:productId", userController.editLogic)
+router.get("/edit/:productId", productController.edit)
+router.post("/edit/:productId", productController.editLogic)
+router.get("/toggleStatus/:productId", productController.toggleStatusProduct);
 //delete user
-router.get("/delete/:productId", userController.del)
+router.get("/delete/:productId", productController.del)
 
-router.get("/active/:productId", userController.show_active)
-router.get("/deactive/:productId", userController.show_deactive)
+router.get("/active", productController.show_active)
+router.get("/deactive", productController.show_deactive)
 
 module.exports = router
