@@ -1,0 +1,64 @@
+{{>navbar}}
+    <section class="container my-5">
+    <form method="post">
+      <div class="mb-3">
+            <input name="name" placeholder="Name" class="form-control" value="{{productsData.name}}">
+              {{#if errors.name}}
+            <div class="alert alert-danger">
+               {{errors.name.message}}
+            </div>
+            {{/if}}
+        </div>
+        <div class="mb-3">
+            <input name="barcode" placeholder="Barcode" class="form-control" value="{{productsData.barcode}}">
+              {{#if errors.barcode}}
+            <div class="alert alert-danger">
+               {{errors.barcode.message}}
+            </div>
+            {{/if}}
+        </div>
+        <div class="mb-3">
+            <input name="description" placeholder="Description" class="form-control" value="{{productsData.description}}">
+             {{#if errors.description}}
+            <div class="alert alert-danger">
+               {{errors.description.message}}
+            </div>
+            {{/if}}
+        </div>
+         <div class="mb-3">
+            <input name="pricebefore" placeholder="Price before" class="form-control" value="{{productsData.pricebefore}}">
+              {{#if errors.pricebefore}}
+            <div class="alert alert-danger">
+               {{errors.pricebefore.message}}
+            </div>
+            {{/if}}
+        </div>
+        <div class="mb-3">
+            <input name="priceafter" placeholder="Price after" class="form-control" value="{{productsData.priceafter}}">
+             {{#if errors.priceafter}}
+            <div class="alert alert-danger">
+               {{errors.priceafter.message}}
+            </div>
+            {{/if}}
+       </div>
+           <div class="mb-3">
+            {{isActive}}
+            {{!-- {{#unless isActive}} yes{{/unless}} --}}
+            <select name="status"  class="form-control">
+                <option
+                    value="active"
+                    {{#if isActive}}
+                        selected
+                    {{/if}}
+
+                    >active</option>
+                <option value="deactive" {{#unless isActive}} selected {{/unless}} >deactive</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <input type="submit" value="Edit Product" class="btn btn-primary">
+        </div>
+    </form>
+    </section>
+{{>footer}}

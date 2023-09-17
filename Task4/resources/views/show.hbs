@@ -1,0 +1,33 @@
+{{>navbar}}
+
+    <section class="container my-5">
+     
+        <table class="table table-stripped mt-4">
+            <thead>
+                <tr>
+                 <th>#</th>
+                <th>Name</th>
+                <th>Barcode</th>
+                <th>Description</th>
+                <th>Price before the offer</th>
+                <th>Price after the offer</th>
+                <th>Status</th>
+
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                 <td>{{productsData.id}}</td>
+                    <td>{{productsData.name}}</td>
+                    <td>{{productsData.barcode}}</td>
+                    <td>{{productsData.description}}</td>
+                    <td>{{productsData.pricebefore}}</td>
+                    <td>{{productsData.priceafter}}</td>
+                    <td> {{productsData.status}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+{{>footer}}
