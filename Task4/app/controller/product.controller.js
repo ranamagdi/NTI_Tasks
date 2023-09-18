@@ -69,12 +69,18 @@ class Product{
     }
 
 
-    static show_active = (req,res)=>{
-        const allProducts = DealWithJson.readFromJSON();
-        let activeProducts = allProducts.filter((p) => p.status == "active");
-        if (req.query.searchKeyh) {
-        activeProducts = Product.searchProducts(req, res, activeProducts);
+    static show_active =async(req,res)=>{
+
+        let allProducts= await productModle.find()
+        if(req.query.searchKey){
+            allProducts = await productModle.find({'name':{'$regex':req.query.searchKey,'$options':'i'}}||
+           {'barcode':{'$regex':req.query.searchKey,'$options':'i'}})
+
+
         }
+        let activeProducts=await productModle.find({status:"active"})
+        // let activeProducts = allProducts.filter((p) => p.status == "active");
+
         res.render("showActive", {
             pageTitle: "Active Products",
             allProducts:activeProducts,
@@ -82,13 +88,16 @@ class Product{
 
         })
     }
-    static show_deactive = (req,res)=>{
-        const allProducts = DealWithJson.readFromJSON();
-        let deactiveProducts = allProducts.filter((p) => p.status == "deactive");
-        if (req.query.searchKeyh) {
-        deactiveProducts = Product.searchProducts(req, res, deactiveProducts);
-        }
+    static show_deactive = async (req,res)=>{
+        let allProducts= await productModle.find()
+        if(req.query.searchKey){
+            allProducts = await productModle.find({'name':{'$regex':req.query.searchKey,'$options':'i'}}||
+           {'barcode':{'$regex':req.query.searchKey,'$options':'i'}})
 
+
+        }
+        let deactiveProducts=await productModle.find({status:"deactive"})
+        // let activeProducts = allProducts.filter((p) => p.status == "active");
         res.render("showDeactive", {
             pageTitle: "Deactive Products",
             allProducts:deactiveProducts,
@@ -142,19 +151,18 @@ class Product{
 
     }
 
-    static toggleStatusProduct = (req, res) => {
-        const id = req.params.productId
-        const allProducts = DealWithJson.readFromJSON()
-        const index = allProducts.findIndex( product => product.id == id )
-        console.log(index)
-        if (allProducts[index].status == 'active') {
+    static toggleStatusProduct = async(req, res) => {
 
-          allProducts[index].status = "deactive";
-          DealWithJson.writeToJSON(allProducts);
+        let allProducts= await productModle.findById(req.params.productId)
+        // console.log(index)
+        if (allProducts.status == 'active') {
+
+          allProducts.status = "deactive";
+          await allProducts.save()
           Product.show_active(req, res);
         } else {
-          allProducts[index].status = "active";
-          DealWithJson.writeToJSON(allProducts);
+          allProducts.status = "active";
+          await allProducts.save()
           Product.show_deactive(req, res);
         }
 
