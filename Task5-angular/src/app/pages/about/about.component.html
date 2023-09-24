@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="col-12 col-md-6">
+    <input type="email" class="form-control">
+  </div>
+  <div class="col-12 col-md-6 d-flex">
+    <input #emailInput [type]="inputType" class="form-control" (keyup.control.enter)="handleInput(emailInput)">
+    <!-- <input [type]="inputType" class="form-control"> -->
+
+    <button class="btn btn-primary" type="button" (click)="handleInputType()">show</button>
+  </div>
+  <div class="col-12">
+    <input type="text" #filter name="userName" class="form-control">
+  </div>
+  <div class="col-12">
+    <button class="btn btn-success">login</button>
+  </div>
+  {{userNameInputValue}}
+</div>

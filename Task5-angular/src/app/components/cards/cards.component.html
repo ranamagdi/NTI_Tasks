@@ -1,0 +1,13 @@
+<div class="container">
+  <input type="text"  class="form-control my-3" placeholder="search" [(ngModel)]="searchText" (input)="searchFilter()">
+  <div class="row">
+    <div class="col" *ngFor="let product of searcharray" >
+      <div class="card" >
+        <img src="{{product.thumbnail}}" class="card-img-top">
+        <div class="card-body">
+          <h2>{{product.title}}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
