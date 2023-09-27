@@ -1,0 +1,16 @@
+/*news start*/
+.main-layout{
+  margin-top: 80px;
+  padding-bottom: 60px;
+}
+.p_news{
+  font-size: 17px;
+  font-weight: 600;
+}
+.mask{
+  background-color: rgba(251, 251, 251, 0.15)
+}
+.image-news{
+  height: 220px;
+  width: 350px;
+}

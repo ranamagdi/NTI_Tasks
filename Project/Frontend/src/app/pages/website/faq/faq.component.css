@@ -1,0 +1,43 @@
+/*f_a_q start*/
+.f_a_q{
+  margin-top: 40px;
+  padding-bottom: 70px;
+}
+.btn-hover{
+  font-size: 17px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.btn-hover:active:hover{
+  background-color:#02b3e0;
+  color: white;
+}
+.btn-hover.collapsed:hover{
+  background-color:#02b3e0;
+  color: white;
+}
+.accordion-body-p{
+  font-size: 18px;
+}
+
+.btn-hover:not(:focus):hover{
+  background-color:#02b3e0;
+  color: white;
+
+}
+
+
+.btn-hover:active {
+
+  box-shadow:
+  0 0 3px .2rem rgb(134, 134, 134),
+  0 0 3px .2rem rgb(134, 134, 134);
+
+}
+
+
+
+.h3-accordion{
+  background-color: #071e33;
+
+}

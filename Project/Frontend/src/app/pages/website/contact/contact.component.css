@@ -1,0 +1,25 @@
+/*contact start*/
+.contact{
+  padding-top: 75px;
+  background-color: #071e33;
+  border-radius: 0 0 30% 30%;
+  text-align: center;
+
+}
+.contact form{
+   padding-top: 10px;
+}
+.contact a{
+   font-size: 18px;
+
+}
+.p-contact{
+   font-size: 18px;
+
+}
+
+.status{
+   margin-top: 53px;
+   padding-bottom: 45px;
+
+}

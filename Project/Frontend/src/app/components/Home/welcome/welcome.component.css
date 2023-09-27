@@ -1,0 +1,56 @@
+/*welcome start*/
+
+.welcome h2{
+  text-align: center;
+  padding: 15px 0 2px 0;
+ }
+ .line{
+     width: 6%;
+     height: 2px;
+     background-color: #02b3e0;
+     margin: 0 auto 0 auto;
+ }
+ .welcome p{
+     text-align: center;
+     padding-top: 15px;
+     padding-bottom: 8px;
+     font-size: 17px;
+ }
+ .welcome .content .text{
+     margin-top: 8px;
+ }
+
+ .welcome .content .text h4{
+     font-size: 18px;
+     font-weight: 400;
+     line-height: 26px;
+     padding:55px 0 33px 0;
+ }
+ .welcome .content .text p{
+     text-align: left;
+     padding-bottom: 20px;
+
+ }
+ .welcome .content .text ul {
+     list-style-type: none;
+     padding: 0;
+ }
+ .welcome .content .text ul li{
+     padding-bottom: 10px;
+     font-size: 17px;
+
+ }
+ .welcome .content .text ul li .icon{
+
+     padding-right: 4px;
+     color: #02b3e0;
+ }
+
+
+ .welcome .content .image img{
+     padding-left: 50px;
+     width: 90%;
+     height: 90%;
+     border-radius: 10px;
+
+ }
