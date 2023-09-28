@@ -1,5 +1,4 @@
 
-
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -14,8 +13,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
-
-  padding: 0;
   line-height: 1.5;
   color: #212529;
   text-align: left;
@@ -470,33 +467,6 @@ pre {
   flex-grow: 1;
   max-width: 100%; }
 
- .Products{
-  background-color: #A076F9;
-  text-align: center;
-  min-height: 250px;
-  min-width: 250px;
-  padding-top: 70px;
-  border-radius: 10px;
-
-
- }
- .users{
-  background-color: #75C2F6;
-  border-radius: 10px;
-  text-align: center;
-  min-height: 250px;
-  padding-top: 70px;
-  min-width: 250px;
-
- }
- .Orders{
-  background-color: #A1CCD1;
-  border-radius: 10px;
-  text-align: center;
-  min-height: 250px;
-  min-width: 250px;
-  padding-top: 70px;
- }
 .col-auto {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
@@ -8170,12 +8140,7 @@ h1, h2, h3, h4, h5,
   background: #ff6768 !important; }
 
 .ftco-section {
-  padding: 7em 0;
-
-
- margin-top: 0;
-}
-
+  padding: 7em 0; }
 
 .ftco-no-pt {
   padding-top: 0; }
@@ -8196,12 +8161,7 @@ h1, h2, h3, h4, h5,
   width: 100%;
   overflow: hidden;
   position: relative; }
-.p{
-  background-color: #005cbf;
-  height: 100px;
-  text-align: center;
-  padding-top: 40px;
-}
+
 #colorlib-aside {
   padding-top: 3em;
   padding-bottom: 40px;

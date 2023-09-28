@@ -19,8 +19,16 @@ import { NotfoundComponent } from './pages/website/notfound/notfound.component';
 import { RegistrationComponent } from './pages/auth/User/registration/registration.component';
 import { LoginComponent } from './pages/auth/User/login/login.component';
 import { DashboardComponent } from './pages/auth/Admin/dashboard/dashboard.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { ProductsComponent } from './pages/auth/Admin/products/products.component';
+import { UsersComponent } from './pages/auth/Admin/users/users.component';
+import { OrdersComponent } from './pages/auth/Admin/orders/orders.component';
+import { AddadminComponent } from './pages/auth/Admin/addadmin/addadmin.component';
+
 
 
 @NgModule({
@@ -40,6 +48,13 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     RegistrationComponent,
     LoginComponent,
     DashboardComponent,
+    SidebarComponent,
+    ProductsComponent,
+    UsersComponent,
+    OrdersComponent,
+    AddadminComponent,
+
+
 
 
   ],
@@ -47,7 +62,10 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
+    ReactiveFormsModule
 
   ],
   providers: [

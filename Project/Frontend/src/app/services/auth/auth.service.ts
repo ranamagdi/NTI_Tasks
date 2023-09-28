@@ -19,4 +19,14 @@ export class AuthService {
   logout(obj:any):Observable<any>{
     return this.http.post(`${this.baseUrl}logout`,obj)
   }
+
+  register(obj:any):Observable<any>{
+    return this.http.post(`${this.baseUrl}add`,obj)
+  }
+
+  registerAdmin(obj:any):Observable<any>{
+    return this.http.post(`${this.baseUrl}addAdmin`,obj)
+  }
+
+
 }

@@ -16,6 +16,7 @@ export class LoginComponent {
     email:'',
     password:''
   }
+  UserType : any
 
   handleSubimt(form:NgForm){
        console.log(form)
@@ -25,7 +26,10 @@ export class LoginComponent {
             if(res.apiStatus) {
               localStorage.setItem("token" , res.data.token)
               this.auth.isLogin=true
+              if(res.data.userData.userType=='user')
               this.router.navigateByUrl('/')
+              else
+              this.router.navigateByUrl('/dashboard')
             }
           })
 

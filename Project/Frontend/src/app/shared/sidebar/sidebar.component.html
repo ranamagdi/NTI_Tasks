@@ -1,0 +1,13 @@
+<aside id="colorlib-aside" role="complementary" class="js-fullheight pt-5 bg-light">
+  <nav id="colorlib-main-menu" role="navigation">
+    <ul>
+      <li ><a routerLink="/dashboard"  routerLinkActive="text-primary"   [routerLinkActiveOptions]="{'exact' :  true}">Home</a></li>
+      <li><a routerLinkActive="text-primary" routerLink="/productsshow">Products</a></li>
+      <li><a routerLinkActive="text-primary" routerLink="/usershow">Users</a></li>
+      <li><a routerLinkActive="text-primary" routerLink="/ordershow">Orders</a></li>
+      <li><a routerLinkActive="text-primary" routerLink="/addamin">Add New Admin</a></li>
+      <li *ngIf="auth.isLogin"><a (click)="handleLogOut()" href="">Logout</a></li>
+
+    </ul>
+  </nav>
+</aside> <!-- END COLORLIB-ASIDE -->
