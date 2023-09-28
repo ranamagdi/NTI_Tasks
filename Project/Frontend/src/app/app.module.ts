@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import {HttpClientModule} from '@angular/common/http'
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http'
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { WelcomeComponent } from './components/Home/welcome/welcome.component';
@@ -20,6 +20,7 @@ import { RegistrationComponent } from './pages/auth/User/registration/registrati
 import { LoginComponent } from './pages/auth/User/login/login.component';
 import { DashboardComponent } from './pages/auth/Admin/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
 
 
 @NgModule({
@@ -49,7 +50,16 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthInterceptor,
+      multi:true
+
+    }
+
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

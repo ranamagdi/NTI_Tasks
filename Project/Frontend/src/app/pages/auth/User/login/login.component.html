@@ -21,12 +21,15 @@
             <div class="form-outline mb-4">
               <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Enter password"
               [(ngModel)]="model.password" name="password" #password="ngModel" required
-            
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+
               />
 
               <div class="alert alert-danger" *ngIf="password.invalid &&(password.dirty||loginform.submitted)">
                     <div *ngIf="password.errors?.['required']">password is required</div>
-                    <!-- <div *ngIf="password.errors?.['pattern']">Match the pattern</div> -->
+                    <div *ngIf="password.errors?.['pattern']">must contain 8 or more characters that are of at least one number,
+                      and one uppercase and lowercase letter
+              </div>
               </div>
 
             </div>
