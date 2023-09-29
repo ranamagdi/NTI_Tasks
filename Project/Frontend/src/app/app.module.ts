@@ -28,6 +28,9 @@ import { ProductsComponent } from './pages/auth/Admin/products/products.componen
 import { UsersComponent } from './pages/auth/Admin/users/users.component';
 import { OrdersComponent } from './pages/auth/Admin/orders/orders.component';
 import { AddadminComponent } from './pages/auth/Admin/addadmin/addadmin.component';
+import { AddProductComponent } from './pages/auth/Admin/add-product/add-product.component';
+import { ProfileComponent } from './pages/website/profile/profile.component';
+import { ShowSingleUserComponent } from './pages/auth/Admin/show-single-user/show-single-user.component';
 
 
 
@@ -53,6 +56,9 @@ import { AddadminComponent } from './pages/auth/Admin/addadmin/addadmin.componen
     UsersComponent,
     OrdersComponent,
     AddadminComponent,
+    AddProductComponent,
+    ProfileComponent,
+    ShowSingleUserComponent,
 
 
 

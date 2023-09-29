@@ -1,1 +1,40 @@
-<p>orders works!</p>
+<div id="colorlib-main" >
+  <app-sidebar></app-sidebar>
+  <section class="ftco-section ftco-intro">
+    <button class="btn btn-danger " (click)="handelDeleteAll()">Done All</button>
+    <div class="table-responsive">
+
+    <table class="table table-stripped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">orderDate</th>
+          <th scope="col">Total Amount</th>
+          <th scope="col">Barcode</th>
+          <th scope="col">User Id</th>
+          <th scope="col">Products</th>
+          <th scope="col">Status</th>
+
+        </tr>
+      </thead>
+      <tbody  >
+        <tr *ngFor="let u of orders">
+          <td >{{u._id}}</td>
+          <td >{{u.orderDate}}</td>
+          <td>{{u.totalAmount}}</td>
+          <td>{{u.barCode}}</td>
+          <td>{{u.userId}}</td>
+          <td *ngFor="let p of u.products">Name: {{p.productName }}<br> Description:{{p.description}}<br>Price:{{p.price}}<br>
+              Arrive date   {{p.dOfArrive}}
+
+          </td>
+          <td>{{u.status}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+    </section>
+    </div>
+

@@ -14,6 +14,7 @@ router.delete("/delete/:id",adminAuth,userController.delSingle)
 
 router.get("/all/:id",adminAuth,userController.showSingle)
 router.get("/all",adminAuth,userController.showAll)
+router.get("/myprofile",userAuth,userController.myProfile)
 
 router.patch("/edit/:id",userAuth,userController.editSingle)
 

@@ -13,6 +13,11 @@ import { AddadminComponent } from './pages/auth/Admin/addadmin/addadmin.componen
 import { ProductsComponent } from './pages/auth/Admin/products/products.component';
 import { UsersComponent } from './pages/auth/Admin/users/users.component';
 import { OrdersComponent } from './pages/auth/Admin/orders/orders.component';
+import { canActivateGuard } from './guards/can-activate/can-activate.guard';
+import { AddProductComponent } from './pages/auth/Admin/add-product/add-product.component';
+import { ProfileComponent } from './pages/website/profile/profile.component';
+import { canActivateChildGuard } from './guards/can-activate-child/can-activate-child.guard';
+import { ShowSingleUserComponent } from './pages/auth/Admin/show-single-user/show-single-user.component';
 
 
 const routes: Routes = [
@@ -22,13 +27,22 @@ const routes: Routes = [
   {path:'faq',component:FaqComponent},
   {path:'contact',component:ContactComponent},
   {path:'login',component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent},
-  {path:'addamin',component:AddadminComponent},
-  {path:'productsshow',component:ProductsComponent},
-  {path:'usershow',component:UsersComponent},
-  {path:'ordershow',component:OrdersComponent},
-  {path:'register',component:RegistrationComponent},
 
+  {
+    path: 'dashboard', canActivateChild: [canActivateChildGuard],
+    children: [
+      { path: '', component:DashboardComponent },
+      {path:'addamin',component:AddadminComponent},
+      {path:'productsshow',component:ProductsComponent},
+      {path:'productsadd',component:AddProductComponent},
+      {path:'usershow',component:UsersComponent},
+      {path:'singleusershow/:id',component:ShowSingleUserComponent},
+      {path:'ordershow',component:OrdersComponent},
+    ]
+
+  },
+  {path:'register',component:RegistrationComponent},
+  {path:'profile',component:ProfileComponent, canActivate:[canActivateGuard]},
   {path:'**',component:NotfoundComponent}
 ];
 

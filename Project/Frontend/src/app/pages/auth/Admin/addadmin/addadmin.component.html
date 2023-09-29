@@ -1,8 +1,6 @@
-
-<div id="colorlib-main" >
-  <app-sidebar></app-sidebar>
+<app-sidebar></app-sidebar>
 <section class=" gradient-custom ">
-  <div class="container  h-100">
+  <div class="container h-100">
     <div class="row justify-content-center align-items-center h-100">
       <div class="col-12 col-lg-9 col-xl-7">
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
@@ -18,8 +16,8 @@
                     [(ngModel)]="model.fName" name="fName" #fName="ngModel" required
                     />
                   </div>
-                  <div class="alert alert-danger" *ngIf="registerform.submitted">
-                    <div *ngIf="fName.errors?.['required']">First name is required</div>
+                  <div *ngIf="registerform.submitted">
+                    <div class="alert alert-danger"  *ngIf="fName.errors?.['required']">First name is required</div>
                  </div>
 
                 </div>
@@ -30,8 +28,8 @@
                     [(ngModel)]="model.lName" name="lName" #lName="ngModel" required
                     />
                   </div>
-                  <div class="alert alert-danger" *ngIf="registerform.submitted">
-                    <div *ngIf="lName.errors?.['required']">Last name is required</div>
+                  <div  *ngIf="registerform.submitted">
+                    <div class="alert alert-danger" *ngIf="lName.errors?.['required']">Last name is required</div>
                  </div>
 
                 </div>
@@ -114,8 +112,8 @@
                       <option *ngFor="let c of countryCode">{{c}}</option>
                     </select>
                   </div>
-                  <div class="alert alert-danger" *ngIf="registerform.submitted">
-                    <div *ngIf="countrycode.errors?.['required']">country Code is required</div>
+                  <div  *ngIf="registerform.submitted">
+                    <div class="alert alert-danger" *ngIf="countrycode.errors?.['required']">country Code is required</div>
 
                  </div>
                 </div>
@@ -126,8 +124,8 @@
                     />
 
                   </div>
-                  <div class="alert alert-danger" *ngIf="registerform.submitted">
-                    <div *ngIf="phone.errors?.['required']">phone is required</div>
+                  <div  *ngIf="registerform.submitted">
+                    <div  class="alert alert-danger" *ngIf="phone.errors?.['required']">phone is required</div>
 
                  </div>
 
@@ -172,5 +170,3 @@
     </div>
   </div>
 </section>
-</div>
-

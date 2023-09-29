@@ -7,11 +7,11 @@ const router = require("express").Router()
 router.post("/add",userAuth, orderController.addOrder)
 
 
-router.delete("/delete",userAuth,orderController.delAllOrders)
+router.delete("/delete",adminAuth,orderController.delAllOrders)
 router.delete("/delete/:id",userAuth,orderController.delSingle)
 
 router.get("/all/:id",userAuth,orderController.showSingle)
-router.get("/all",userAuth,orderController.showAll)
+router.get("/all",adminAuth,orderController.showAll)
 
 router.patch("/edit/:id",userAuth,orderController.editSingle)
 

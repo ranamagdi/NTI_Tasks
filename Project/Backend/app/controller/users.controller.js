@@ -112,6 +112,9 @@ class User {
             resGenerator(res, 500, false, e, "error in upload img")
         }
     }
+    static myProfile = async(req,res)=>{
+        resGenerator(res, 200, true, {user: req.user, token: req.token}, "data showed")
+    }
 
 }
 module.exports=User
