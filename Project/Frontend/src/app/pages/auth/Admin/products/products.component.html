@@ -1,0 +1,22 @@
+<div id="colorlib-main" >
+  <app-sidebar></app-sidebar>
+  <section class="ftco-section ftco-intro">
+    <button class="btn btn-danger" (click)="handelDeleteAll()">Delete All</button>
+     <div class="container d-flex justify-content-between">
+      <div class="card " style="width: 18rem;" *ngFor="let p of products">
+        <img src="{{p.img}}" class="card-img-top">
+        <div class="card-body text-center bg-secondary text-light ">
+           <h5 class="card-title text-light">{{p.productName}}</h5>
+           <p class="card-body">{{p.description}}</p>
+           <p class="card-body">Arrived at:{{p.dOfArrive}}</p>
+           <p class="card-body">${{p.price}}</p>
+           <p class="card-body"> category: {{p.category}} </p>
+           <button class="btn btn-success" routerLink="/dashboard/singleusershow/${u._id}"><i class="fa fa-eye"></i></button>
+           <button class="btn btn-danger mx-3" (click)="handelDelete(p._id)"><i class=" fa fa-trash"></i></button>
+        </div>
+      </div>
+     </div>
+
+    </section>
+    </div>
+

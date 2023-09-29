@@ -43,9 +43,9 @@ export class AuthService {
     return this.http.get(`${this.baseUrl}users/all`)
   }
 
-  showSingleUser(id : any ):Observable<any>{
-    return this.http.get(`${this.baseUrl}users/all/${id}`)
-  }
+  // showSingleUser(id : any ):Observable<any>{
+  //   return this.http.get(`${this.baseUrl}users/all/${id}`)
+  // }
 
   deleteSingleUser(id : any ):Observable<any>{
     return this.http.delete(`${this.baseUrl}users/delete/${id}`)
@@ -68,5 +68,13 @@ export class AuthService {
   }
 
 
-
+  showAllProducts():Observable<any>{
+    return this.http.get(`${this.baseUrl}products/all`)
+  }
+  deleteAllProducts():Observable<any>{
+    return this.http.delete(`${this.baseUrl}products/delete`)
+  }
+  deleteSingleProduct(id : any ):Observable<any>{
+    return this.http.delete(`${this.baseUrl}products/delete/${id}`)
+  }
 }

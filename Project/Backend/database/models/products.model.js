@@ -24,7 +24,8 @@ const productSchema = mongoose.Schema({
     category:{
         type:String,
         trim:true,
-        enum:["family", "cook","economic"]
+        enum:["family", "cook","economic"],
+        required:true
 
     },
     dOfArrive:{
