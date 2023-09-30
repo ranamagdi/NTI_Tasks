@@ -1,13 +1,13 @@
 <app-navbar></app-navbar>
 <div class="container d-flex justify-content-between" style="padding-top:6rem ;">
   <div class="card " style="width: 18rem;" *ngFor="let p of products">
-    <img src="{{p.img}}" class="card-img-top">
+    <img src="{{p.image}}" class="card-img-top"  name="img"   style="height: 18rem;">
     <div class="card-body text-center bg-secondary text-light ">
-       <h5 class="card-title text-light">{{p.productName}}</h5>
-       <p class="card-body">{{p.description}}</p>
-       <p class="card-body">Arrived at:{{p.dOfArrive}}</p>
-       <p class="card-body">${{p.price}}</p>
-       <p class="card-body"> category: {{p.category}} </p>
+       <h5 class="card-title text-light"  name="productName" >{{p.productName}}</h5>
+       <p class="card-body"  name="description">{{p.description}}</p>
+       <p class="card-body" name="dOfArrive" >Arrived at:{{p.dOfArrive}}</p>
+       <p class="card-body" name="price">${{p.price}}</p>
+       <p class="card-body" name="category" > category: {{p.category}} </p>
     </div>
     <button class="btn btn-light" routerLink="/cart"><i class="fa fa-cart-plus  fa-2x"></i></button>
   </div>

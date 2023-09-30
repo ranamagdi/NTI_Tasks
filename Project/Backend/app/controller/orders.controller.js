@@ -1,13 +1,26 @@
 const orderModel = require("../../database/models/orders.model")
+const productModel = require("../../database/models/products.model")
 
 const {resGenerator,fileHandler} = require("../helper")
 class Order {
+    static cart=async()=>{
+        const carts=await orderModel.find().populate({
+            path:"items.productId",
+            select:"productName price totalAmount"
+        })
+        return carts[0]
+    }
+    static addItem=async payload=>{
+        const newitem=await orderModel.create(payload)
+        return newitem
+    }
     static addOrder = async (req, res) => {
         try {
-
-            const orderData = new orderModel({userId: req.user._id, ...req.body})
+            req.params.id=productModel._id
+            const productId = await orderModel.find()
+            const orderData = new orderModel({userId: req.user._id ,...req.body})
             await orderData.save()
-            resGenerator(res, 200, true, orderData, "order added")
+            resGenerator(res, 200, true, orderData,"order added")
 
         }
         catch (e) {

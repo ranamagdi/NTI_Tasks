@@ -1,0 +1,838 @@
+{
+	"info": {
+		"_postman_id": "a2f862a1-e9e6-4b8e-bc59-2b3bc82b71d1",
+		"name": "ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22000918",
+		"_collection_link": "https://martian-meteor-136403.postman.co/workspace/Team-Workspace~9b3e7694-cbc1-46e8-87d6-84dafaf45f0f/collection/22000918-a2f862a1-e9e6-4b8e-bc59-2b3bc82b71d1?action=share&source=collection_link&creator=22000918"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "registerUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \r\n    \"fName\":\"Rahma\",\r\n    \"lName\":\"Ahmed\",\r\n    \"password\":\"Testing@123!\",\r\n    \"countryCode\":\"ar-EG\",\r\n    \"phone\":\"01062190041\",\r\n    \"email\":\"rahma@gmail.com\",\r\n    \"gender\":\"female\",\r\n    \"userType\":\"user\",\r\n    \"dOfBirth\":\"1995-9-19\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}users/add",
+									"host": [
+										"{{local_url}}users"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registerAdmin",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwODk3ODlkNDZjNjY2ZmQyNzY3YTAiLCJpYXQiOjE2OTU2NjIzODF9.oH5Qk1eJt6p-XcgHvkYzHCxfa5RRV1E2ZgYIcbPx2cM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fName\":\"Rana\",\r\n    \"lName\":\"Magdi\",\r\n    \"password\":\"Testing@123!\",\r\n    \"countryCode\":\"ar-EG\",\r\n    \"phone\":\"01062190041\",\r\n    \"email\":\"ranamagdi@gmail.com\",\r\n    \"gender\":\"female\",\r\n    \"userType\":\"user\",\r\n    \"dOfBirth\":\"1995-9-19\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}users/addAdmin",
+									"host": [
+										"{{local_url}}users"
+									],
+									"path": [
+										"addAdmin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "loginUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"email\":\"rahma@gmail.com\",\r\n    \"password\":\"Testing@123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}users/login",
+									"host": [
+										"{{local_url}}users"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logoutUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwODk3ODlkNDZjNjY2ZmQyNzY3YTAiLCJpYXQiOjE2OTU2NTk1NjN9.lPU0Tb8NX4l7vzNegN2eKYrzM1fj5uMxwknM7hOA5W0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}users/logout",
+									"host": [
+										"{{local_url}}users"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAllUser",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTBmMDAxYmVjMTNkOGVlYTJjYzdiZTkiLCJpYXQiOjE2OTU1ODIzMTJ9.gALtVPvThKP15kQhd585EBpoo4q1ePKw5dbev5CEs3A",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}users/delete",
+									"host": [
+										"{{local_url}}users"
+									],
+									"path": [
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteUser",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwODk3ODlkNDZjNjY2ZmQyNzY3YTAiLCJpYXQiOjE2OTU2NjIzODF9.oH5Qk1eJt6p-XcgHvkYzHCxfa5RRV1E2ZgYIcbPx2cM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}users/delete/6511c1856cce499b87f3eb89",
+									"host": [
+										"{{local_url}}users"
+									],
+									"path": [
+										"delete",
+										"6511c1856cce499b87f3eb89"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editProfileUser",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwOGMwZDM4NDFmNGEyZWFkZTRmMTMiLCJpYXQiOjE2OTU1ODUyMDd9.pt526B-xAIohHIYXxSnlybKiA8cP5DOmfMqcauJKh7w",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n\"lName\":\"Mansour\",\r\n\"addresses\":[ {\r\n            \"addrType\":\"home\",              \r\n\r\n           \"addrDetails\":\"Naser-city\"\r\n               \r\n        }\r\n\r\n]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}users/edit/65108c0d3841f4a2eade4f13",
+									"host": [
+										"{{local_url}}users"
+									],
+									"path": [
+										"edit",
+										"65108c0d3841f4a2eade4f13"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "showAllUsers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwODk3ODlkNDZjNjY2ZmQyNzY3YTAiLCJpYXQiOjE2OTU2NjIzODF9.oH5Qk1eJt6p-XcgHvkYzHCxfa5RRV1E2ZgYIcbPx2cM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}users/all",
+									"host": [
+										"{{local_url}}users"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "showsingleUser",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTE3MmE4ZDEyNzNkMzVjZTc2NGM3YWMiLCJpYXQiOjE2OTYwNjQxMzd9.A6LYYs8nh_rywbfUbGotna9MB-O-mNiyColL8gEg62o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}users/all/65172a8d1273d35ce764c7ac",
+									"host": [
+										"{{local_url}}users"
+									],
+									"path": [
+										"all",
+										"65172a8d1273d35ce764c7ac"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "uploadimg",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwOGMwZDM4NDFmNGEyZWFkZTRmMTMiLCJpYXQiOjE2OTU2NTU4NjB9.SUwRd-9YZEn1tIkMfCrY7cciQATnrrZt6-M3tgRFAnk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "img",
+											"type": "file",
+											"src": "/C:/Users/vip/Pictures/acc_speech.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_url}}users/uploadimg",
+									"host": [
+										"{{local_url}}users"
+									],
+									"path": [
+										"uploadimg"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "myprofile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwODk3ODlkNDZjNjY2ZmQyNzY3YTAiLCJpYXQiOjE2OTU5MjAyNjB9.ucLA1fKh8oxgovV-f1l6DiplouMOVx9WAyJf86-P32k",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}users/myprofile",
+									"host": [
+										"{{local_url}}users"
+									],
+									"path": [
+										"myprofile"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "addProduct",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTE3MmE4ZDEyNzNkMzVjZTc2NGM3YWMiLCJpYXQiOjE2OTYwMjEwMzN9.doZNGv430dwGCzaY5Yn8Pv_EpIxt3jw4ECqIBZcbcWY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/vip/Pictures/1_0G5zu7CnXdMT9pGbYUTQLQ.png",
+											"disabled": true
+										},
+										{
+											"key": "productName",
+											"value": "very rich",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "book of alexandro",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "dOfArrive",
+											"value": "2020-9-19",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "price",
+											"value": "400",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "economic",
+											"type": "text"
+										},
+										{
+											"key": "productName",
+											"value": "How to be rich",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "book of alexandro",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "dOfArrive",
+											"value": "2020-9-19",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "price",
+											"value": "400",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "economic",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_url}}products/add",
+									"host": [
+										"{{local_url}}products"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteProduct",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwODk3ODlkNDZjNjY2ZmQyNzY3YTAiLCJpYXQiOjE2OTU2NzAwODN9.tVmqllxZGr0KGEJ8zVdnozxaC8Ghynj3zyH6ew5OAEM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}products/delete/6511b4cec5a44c50318b46f3",
+									"host": [
+										"{{local_url}}products"
+									],
+									"path": [
+										"delete",
+										"6511b4cec5a44c50318b46f3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAllProducts",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwODk3ODlkNDZjNjY2ZmQyNzY3YTAiLCJpYXQiOjE2OTU2NzAwODN9.tVmqllxZGr0KGEJ8zVdnozxaC8Ghynj3zyH6ew5OAEM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}products/delete",
+									"host": [
+										"{{local_url}}products"
+									],
+									"path": [
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editProduct",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwODk3ODlkNDZjNjY2ZmQyNzY3YTAiLCJpYXQiOjE2OTU2NzAwODN9.tVmqllxZGr0KGEJ8zVdnozxaC8Ghynj3zyH6ew5OAEM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\":\"micro-Skirt\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}products/edit/6511e01bfc55efea671a8467",
+									"host": [
+										"{{local_url}}products"
+									],
+									"path": [
+										"edit",
+										"6511e01bfc55efea671a8467"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "uploadImg",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwODk3ODlkNDZjNjY2ZmQyNzY3YTAiLCJpYXQiOjE2OTU2NzAwODN9.tVmqllxZGr0KGEJ8zVdnozxaC8Ghynj3zyH6ew5OAEM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "img",
+											"type": "file",
+											"src": "/C:/Users/vip/Pictures/download (3).png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_url}}products/uploadimg",
+									"host": [
+										"{{local_url}}products"
+									],
+									"path": [
+										"uploadimg"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "showProduct",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTE3MmE4ZDEyNzNkMzVjZTc2NGM3YWMiLCJpYXQiOjE2OTYwNjQxMzd9.A6LYYs8nh_rywbfUbGotna9MB-O-mNiyColL8gEg62o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}products/all/6511e037fc55efea671a8470",
+							"host": [
+								"{{local_url}}products"
+							],
+							"path": [
+								"all",
+								"6511e037fc55efea671a8470"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwOGMwZDM4NDFmNGEyZWFkZTRmMTMiLCJpYXQiOjE2OTU2NzM3OTR9.6IX8xOXpCHgiRukqavnY0OtXBv7OhZUBPLg3Zf_6rig",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}products/all",
+							"host": [
+								"{{local_url}}products"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showFamily",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}products/showFamily",
+							"host": [
+								"{{local_url}}products"
+							],
+							"path": [
+								"showFamily"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showCook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}products/showCook",
+							"host": [
+								"{{local_url}}products"
+							],
+							"path": [
+								"showCook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showEconomic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}products/showEconomic",
+							"host": [
+								"{{local_url}}products"
+							],
+							"path": [
+								"showEconomic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "addOrder",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTE3MmFlODEyNzNkMzVjZTc2NGM3YWUiLCJpYXQiOjE2OTYwODUyMjl9.TjknS3sVC4xj16ExxQN0uHTStJrZOFwQ9yDEeTLIgjE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderDate\":\"2021-9-19\",\r\n    \"totalAmount\":200,\r\n    \"barCode\":\"4r479909\",\r\n    \"products\":[  {\r\n          \"productName\":\"The boy\",\r\n           \"description\":\"\",\r\n            \"dOfArrive\":\"2020-09-18T22:00:00.000+00:00\",\r\n            \"price\":500\r\n\r\n    }     \r\n   \r\n   \r\n\r\n\r\n\r\n    ]\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}orders/add/651743608f522ec0fd8c35f8",
+									"host": [
+										"{{local_url}}orders"
+									],
+									"path": [
+										"add",
+										"651743608f522ec0fd8c35f8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "showAllOrders",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTE3MmE4ZDEyNzNkMzVjZTc2NGM3YWMiLCJpYXQiOjE2OTYwMjEwMzN9.doZNGv430dwGCzaY5Yn8Pv_EpIxt3jw4ECqIBZcbcWY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}orders/all",
+									"host": [
+										"{{local_url}}orders"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "showOrder",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwOGMwZDM4NDFmNGEyZWFkZTRmMTMiLCJpYXQiOjE2OTU2NzM3OTR9.6IX8xOXpCHgiRukqavnY0OtXBv7OhZUBPLg3Zf_6rig",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}orders/all/6511fcaf51cbcb6f621bfcd1",
+									"host": [
+										"{{local_url}}orders"
+									],
+									"path": [
+										"all",
+										"6511fcaf51cbcb6f621bfcd1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editOrder",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwOGMwZDM4NDFmNGEyZWFkZTRmMTMiLCJpYXQiOjE2OTU2NzM3OTR9.6IX8xOXpCHgiRukqavnY0OtXBv7OhZUBPLg3Zf_6rig",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"totalAmount\":700\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}orders/edit/6511fcaf51cbcb6f621bfcd1",
+									"host": [
+										"{{local_url}}orders"
+									],
+									"path": [
+										"edit",
+										"6511fcaf51cbcb6f621bfcd1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteOrder",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTEwOGMwZDM4NDFmNGEyZWFkZTRmMTMiLCJpYXQiOjE2OTU2NzM3OTR9.6IX8xOXpCHgiRukqavnY0OtXBv7OhZUBPLg3Zf_6rig",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}orders/delete/6511ee92cd1d7f4bd67023b1",
+									"host": [
+										"{{local_url}}orders"
+									],
+									"path": [
+										"delete",
+										"6511ee92cd1d7f4bd67023b1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAllOrders",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTE3MmE4ZDEyNzNkMzVjZTc2NGM3YWMiLCJpYXQiOjE2OTYwMjEwMzN9.doZNGv430dwGCzaY5Yn8Pv_EpIxt3jw4ECqIBZcbcWY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}orders/delete",
+									"host": [
+										"{{local_url}}orders"
+									],
+									"path": [
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_url",
+			"value": "http:///localhost:3000/",
+			"type": "string"
+		}
+	]
+}

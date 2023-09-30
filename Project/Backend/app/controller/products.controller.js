@@ -1,12 +1,16 @@
 const productModel = require("../../database/models/products.model")
-
+const fs=require('fs')
 const {resGenerator,fileHandler} = require("../helper")
 class Product {
     static addProduct = async (req, res) => {
         try {
 
-            const productData = new productModel({...req.body})
+
+            const newName = fileHandler(req)
+            req.user.image=process.env.appURL+(newName.replace('public',''))//appurl frontend
+            const productData = new productModel({image: req.user.image,...req.body})
             await productData.save()
+
             resGenerator(res, 200, true, productData, "product added")
 
         }

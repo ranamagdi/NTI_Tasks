@@ -4,7 +4,7 @@ const productController = require("../app/controller/products.controller")
 const router = require("express").Router()
 
 
-router.post("/add",adminAuth, productController.addProduct)
+router.post("/add",adminAuth,uploadproducts.single("image"), productController.addProduct)
 
 
 router.delete("/delete",adminAuth,productController.delAllProducts)
@@ -20,5 +20,5 @@ router.get('/showEconomic',productController.showEconomic)
 
 router.patch("/edit/:id",adminAuth,productController.editSingle)
 
-router.post("/uploadimg", adminAuth, uploadproducts.single("img"), productController.uploadimg)
+router.post("/uploadimg", adminAuth, uploadproducts.single("image"), productController.uploadimg)
 module.exports=router

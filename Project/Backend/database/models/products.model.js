@@ -5,14 +5,14 @@ const productSchema = mongoose.Schema({
         type:String,
         required:true,
         minLength:2,
-        maxLength:20,
+        maxLength:120,
         trim:true
        },
     description:{
         type:String,
         required:true,
         minLength:7,
-        maxLength:30,
+        maxLength:130,
         trim:true
     },
 

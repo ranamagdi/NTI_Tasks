@@ -24,31 +24,30 @@ export class AddProductComponent {
   constructor(private auth:AuthService,private router : Router,private toastr: ToastrService){}
   handleImg(eve :any){
     console.log(eve)
-    this.model.image = eve.target.files[0]
+    this.image = eve.target.files[0]
   }
-  // handleSubimt(form:NgForm){
-  //   console.log(form)
-  //   if(form.valid){
-  //     let formData = new FormData()
-  //     formData.append('image' , this.model.image )
-  //     formData.append('productName' , this.model.productName )
-  //     formData.append('description' , this.model.description )
-  //     formData.append('dOfArrive' , this.model.dOfArrive)
-  //     formData.append('category' , this.model.category)
-  //     formData.append('price' , this.model.price)
-  //     // this.auth.Uploadimage(formData).subscribe(res=>{
-  //     //   console.log(res)
-  //       this.auth.addProduct(formData).subscribe(res=>{
-  //         console.log(res)
-  //         if(res.apiStatus) {
-  //           this.toastr.success('Products added success');
-  //           this.router.navigateByUrl('/productsshow')
-  //         }
-  //       })
-  //     // })
+  handleSubimt(form:NgForm){
+    console.log(form)
+    if(form.valid){
+      let formData = new FormData()
+      formData.append('image' , this.image )
+      formData.append('productName' , this.model.productName )
+      formData.append('description' , this.model.description )
+      formData.append('dOfArrive' , this.model.dOfArrive)
+      formData.append('category' , this.model.category)
+      formData.append('price' , this.model.price)
 
-  //   }
-  // }
+        this.auth.addProduct(formData).subscribe(res=>{
+          console.log(res)
+          if(res.apiStatus) {
+            this.toastr.success('Products added success');
+
+          }
+        })
+      // })
+
+    }
+  }
 }
 
 
