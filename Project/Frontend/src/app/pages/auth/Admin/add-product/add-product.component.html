@@ -13,11 +13,13 @@
 
                   <div class="form-outline">
                     <input type="text" id=" productName" class="form-control form-control-lg" placeholder="Product Name"
-                    [(ngModel)]="model.productName" name="productName" #productName="ngModel" required
+                    [(ngModel)]="model.productName" name="productName" #productName="ngModel" required minlength=2  maxlength=120
                     />
                   </div>
                   <div *ngIf="productAddform.submitted">
                     <div class="alert alert-danger"  *ngIf="productName.errors?.['required']">Product name is required</div>
+                    <div class="alert alert-danger"  *ngIf="productName.errors?.['minlength']">Product name must be above 2 char</div>
+                    <div class="alert alert-danger"  *ngIf="productName.errors?.['maxlength']">Product name must be less than 120 char</div>
                  </div>
 
                 </div>
@@ -25,11 +27,13 @@
 
                   <div class="form-outline">
                     <input type="text"  class="form-control form-control-lg" placeholder=" Description"
-                    [(ngModel)]="model.description" name=" description" #description="ngModel" required
+                    [(ngModel)]="model.description" name=" description" #description="ngModel" required minlength=7 maxlength=130
                     />
                   </div>
                   <div  *ngIf="productAddform.submitted">
                     <div class="alert alert-danger" *ngIf="description.errors?.['required']"> Description is required</div>
+                    <div class="alert alert-danger"  *ngIf="productName.errors?.['minlength']">Product name must be above 7 char</div>
+                    <div class="alert alert-danger"  *ngIf="productName.errors?.['maxlength']">Product name must be less than 130 char</div>
                  </div>
 
                 </div>
