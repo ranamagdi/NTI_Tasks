@@ -71,6 +71,50 @@ class Product {
             resGenerator(res, 500, false, e, "error in show data")
         }
     }
+    static showFamily = async (req, res) => {
+        try {
+
+            const productData = await productModel.find()
+            const family = productData.filter(c=> c.category=="family")
+
+
+            resGenerator(res, 200, true, family, "data showed")
+
+        }
+        catch (e) {
+            resGenerator(res, 500, false, e.message, "error in show data")
+        }
+    }
+
+    static showCook = async (req, res) => {
+        try {
+
+            const productData = await productModel.find()
+            const family = productData.filter(c=> c.category=="cook")
+
+
+            resGenerator(res, 200, true, family, "data showed")
+
+        }
+        catch (e) {
+            resGenerator(res, 500, false, e.message, "error in show data")
+        }
+    }
+
+    static showEconomic = async (req, res) => {
+        try {
+
+            const productData = await productModel.find()
+            const family = productData.filter(c=> c.category=="economic")
+
+
+            resGenerator(res, 200, true, family, "data showed")
+
+        }
+        catch (e) {
+            resGenerator(res, 500, false, e.message, "error in show data")
+        }
+    }
 
     static uploadimg = async(req,res)=>{
         try{

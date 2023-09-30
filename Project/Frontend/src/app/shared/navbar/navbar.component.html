@@ -23,10 +23,10 @@
                 <div class="dropdown nav-link">
                   <a class="dropdown-toggle  " data-bs-toggle="dropdown">Categories</a>
                   <ul class="dropdown-menu bg-light">
-                      <li><a class="dropdown-item" >Family Books</a></li>
-                      <li><a class="dropdown-item">Cookery books</a></li>
-                      <li><a class="dropdown-item">Economic Books</a></li>
-                      <li><a class="dropdown-item">Business books</a></li>
+                      <li><a class="dropdown-item" routerLink="/family" >Family Books</a></li>
+                      <li><a class="dropdown-item" routerLink="/cookery">Cookery books</a></li>
+                      <li><a class="dropdown-item" routerLink="/economic">Economic Books</a></li>
+
                     </ul>
               </div><!--close dropdown-->
               </li>
@@ -40,6 +40,7 @@
                   <a class="nav-link" routerLink="/contact"  routerLinkActive="text-secondary">Contact us</a>
                 </li>
 
+
                 <li class="nav-item" *ngIf="!auth.isLogin">
                   <a class="nav-link" routerLink="/login" >Login</a>
                 </li>
@@ -52,6 +53,11 @@
                 </li>
                 <li class="nav-item" *ngIf="auth.isLogin">
                   <a class="nav-link" (click)="handleLogOut()" >Logout</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/cart"  routerLinkActive="text-secondary">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                  </a>
                 </li>
             </ul>
 

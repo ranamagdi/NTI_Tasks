@@ -8,7 +8,7 @@ nav{
 
 }
 .header .log-links{
-  padding: 15px 0;
+  padding: 10px 0;
 }
 .header .log a span{
   color:#071e33;
@@ -18,8 +18,11 @@ nav{
 }
 .header .logo{
   display: inline-block;
-  margin-right: 17rem;
+  margin-right: 14rem;
 
+}
+.icon{
+  font-size: 23px;
 }
 
 .header .links{

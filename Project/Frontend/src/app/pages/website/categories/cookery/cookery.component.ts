@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-cookery',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./cookery.component.css']
 })
 export class CookeryComponent {
+  products:any
+  constructor(private auth:AuthService){}
+  ngOnInit(){
+    this.auth.showCookCategory().subscribe(res=>{
+
+      console.log(res)
+      this.products=res.data
+    })
+  }
 
 }

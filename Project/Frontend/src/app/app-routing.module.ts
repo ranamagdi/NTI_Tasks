@@ -20,6 +20,10 @@ import { canActivateChildGuard } from './guards/can-activate-child/can-activate-
 import { ShowSingleUserComponent } from './pages/auth/Admin/show-single-user/show-single-user.component';
 import { ShowSingleProductComponent } from './pages/auth/Admin/show-single-product/show-single-product.component';
 import { SingleProductEditComponent } from './pages/auth/Admin/single-product-edit/single-product-edit.component';
+import { FamilyComponent } from './pages/website/categories/family/family.component';
+import { EconomicComponent } from './pages/website/categories/economic/economic.component';
+import { CookeryComponent } from './pages/website/categories/cookery/cookery.component';
+import { UserOrderComponent } from './pages/website/user-order/user-order.component';
 
 
 const routes: Routes = [
@@ -41,12 +45,17 @@ const routes: Routes = [
       {path:'singleusershow/:id',component:ShowSingleUserComponent},
       {path:'singleproductshow/:id',component:ShowSingleProductComponent},
       {path:'singleproductedit/:id',component:SingleProductEditComponent},
-      {path:'ordershow',component:OrdersComponent},
+      {path:'ordershow',component:OrdersComponent}
+
     ]
 
   },
   {path:'register',component:RegistrationComponent},
   {path:'profile',component:ProfileComponent, canActivate:[canActivateGuard]},
+  {path:'family',component:FamilyComponent},
+  {path:'economic',component:EconomicComponent},
+  {path:'cookery',component:CookeryComponent},
+  {path:'cart',component:UserOrderComponent, canActivate:[canActivateGuard]},
   {path:'**',component:NotfoundComponent}
 ];
 

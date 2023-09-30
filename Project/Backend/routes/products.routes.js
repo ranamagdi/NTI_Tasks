@@ -12,6 +12,11 @@ router.delete("/delete/:id",adminAuth,productController.delSingle)
 
 router.get("/all/:id",productController.showSingle)
 router.get("/all",productController.showAll)
+router.get('/showFamily',productController.showFamily)
+router.get('/showCook',productController.showCook)
+router.get('/showEconomic',productController.showEconomic)
+
+
 
 router.patch("/edit/:id",adminAuth,productController.editSingle)
 

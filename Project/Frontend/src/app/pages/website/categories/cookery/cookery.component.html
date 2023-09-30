@@ -1,1 +1,17 @@
-<p>cookery works!</p>
+
+<app-navbar></app-navbar>
+     <div class="container d-flex justify-content-between"  style="padding-top:6rem ;">
+      <div class="card " style="width: 18rem;" *ngFor="let p of products">
+        <img src="{{p.img}}" class="card-img-top">
+        <div class="card-body text-center bg-secondary text-light ">
+           <h5 class="card-title text-light">{{p.productName}}</h5>
+           <p class="card-body">{{p.description}}</p>
+           <p class="card-body">Arrived at:{{p.dOfArrive}}</p>
+           <p class="card-body">${{p.price}}</p>
+           <p class="card-body"> category: {{p.category}} </p>
+        </div>
+        <button class="btn btn-light" routerLink="/cart"><i class="fa fa-cart-plus  fa-2x"></i></button>
+      </div>
+     </div>
+
+

@@ -84,5 +84,14 @@ export class AuthService {
     return this.http.patch(`${this.baseUrl}products/edit/${id}` , body )
   }
 
+  showFamilyCategory():Observable<any>{
+    return this.http.get(`${this.baseUrl}products/showFamily`)
+  }
+  showEconomicCategory():Observable<any>{
+    return this.http.get(`${this.baseUrl}products/showEconomic`)
+  }
+  showCookCategory():Observable<any>{
+    return this.http.get(`${this.baseUrl}products/showCook`)
+  }
 
 }

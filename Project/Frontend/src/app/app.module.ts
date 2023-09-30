@@ -36,6 +36,7 @@ import { SingleProductEditComponent } from './pages/auth/Admin/single-product-ed
 import { FamilyComponent } from './pages/website/categories/family/family.component';
 import { CookeryComponent } from './pages/website/categories/cookery/cookery.component';
 import { EconomicComponent } from './pages/website/categories/economic/economic.component';
+import { UserOrderComponent } from './pages/website/user-order/user-order.component';
 
 
 
@@ -69,6 +70,7 @@ import { EconomicComponent } from './pages/website/categories/economic/economic.
     FamilyComponent,
     CookeryComponent,
     EconomicComponent,
+    UserOrderComponent,
 
 
 
