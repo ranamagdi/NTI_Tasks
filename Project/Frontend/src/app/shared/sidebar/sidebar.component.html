@@ -6,6 +6,7 @@
       <li><a routerLinkActive="text-primary" routerLink="/dashboard/usershow">Users</a></li>
       <li><a routerLinkActive="text-primary" routerLink="/dashboard/ordershow">Orders</a></li>
       <li><a routerLinkActive="text-primary" routerLink="/dashboard/addamin">Add New Admin</a></li>
+      <li><a routerLinkActive="text-primary" routerLink="/" [routerLinkActiveOptions]="{'exact' :  true}">Back to website</a></li>
       <li *ngIf="auth.isLogin"><a (click)="handleLogOut()" href="">Logout</a></li>
 
     </ul>

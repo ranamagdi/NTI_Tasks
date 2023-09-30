@@ -18,6 +18,8 @@ import { AddProductComponent } from './pages/auth/Admin/add-product/add-product.
 import { ProfileComponent } from './pages/website/profile/profile.component';
 import { canActivateChildGuard } from './guards/can-activate-child/can-activate-child.guard';
 import { ShowSingleUserComponent } from './pages/auth/Admin/show-single-user/show-single-user.component';
+import { ShowSingleProductComponent } from './pages/auth/Admin/show-single-product/show-single-product.component';
+import { SingleProductEditComponent } from './pages/auth/Admin/single-product-edit/single-product-edit.component';
 
 
 const routes: Routes = [
@@ -37,6 +39,8 @@ const routes: Routes = [
       {path:'productsadd',component:AddProductComponent},
       {path:'usershow',component:UsersComponent},
       {path:'singleusershow/:id',component:ShowSingleUserComponent},
+      {path:'singleproductshow/:id',component:ShowSingleProductComponent},
+      {path:'singleproductedit/:id',component:SingleProductEditComponent},
       {path:'ordershow',component:OrdersComponent},
     ]
 

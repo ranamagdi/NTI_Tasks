@@ -1,36 +1,31 @@
 <app-sidebar></app-sidebar>
-<!-- <section class=" gradient-custom ">
+<section class=" gradient-custom ">
   <div class="container py-5 h-100">
     <div class="row justify-content-center align-items-center h-100">
       <div class="col-12 col-lg-9 col-xl-7">
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center">Add New Product</h3>
-            <form #productAddform="ngForm" (ngSubmit)="handleSubimt(productAddform)">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center">Edit Product</h3>
+            <form [formGroup]="product" (ngSubmit)="handleUpdateProduct()">
 
               <div class="row">
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
                     <input type="text" id=" productName" class="form-control form-control-lg" placeholder="Product Name"
-                    [(ngModel)]="model.productName" name="productName" #productName="ngModel" required
+                    formControlName="productName"
                     />
                   </div>
-                  <div *ngIf="productAddform.submitted">
-                    <div class="alert alert-danger"  *ngIf="productName.errors?.['required']">Product name is required</div>
-                 </div>
 
                 </div>
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
                     <input type="text"  class="form-control form-control-lg" placeholder=" Description"
-                    [(ngModel)]="model.description" name=" description" #description="ngModel" required
+                   formControlName="description"
                     />
                   </div>
-                  <div  *ngIf="productAddform.submitted">
-                    <div class="alert alert-danger" *ngIf="description.errors?.['required']"> Description is required</div>
-                 </div>
+
 
                 </div>
               </div>
@@ -41,7 +36,7 @@
                   <h6>Date of Arrival</h6>
                   <div class="form-outline datepicker w-100">
                     <input type="Date" class="form-control form-control-lg"
-                    [(ngModel)]="model.dOfArrive" name="dOfArrive"  #dOfBirth="ngModel" max="new Date"
+                     formControlName="dOfArrive"  max="new Date"
                     min="01/01/2015"
                     />
                   </div>
@@ -50,15 +45,12 @@
                 <div class="col-md-6 mb-4 pb-2 ">
                   <h6>Category</h6>
                  <div class="form-outline">
-                   <select class="form-control form-control-lg"  [(ngModel)]="model.category" name="category" #category="ngModel" required >
+                   <select class="form-control form-control-lg" formControlName="category" >
 
                      <option *ngFor="let c of Category">{{c}}</option>
                    </select>
                  </div>
-                 <div  *ngIf="productAddform.submitted">
-                   <div class="alert alert-danger" *ngIf="category.errors?.['required']">category is required</div>
 
-                </div>
                </div>
 
 
@@ -75,27 +67,14 @@
                     <h6>Price</h6>
                   <div class="form-outline">
                     <input type="number" id="phoneNumber" class="form-control form-control-lg" placeholder="Price"
-                    [(ngModel)]="model.price" name="price" #price="ngModel" required
+                    formControlName="price"
                     />
 
-                  </div>
-                  <div  *ngIf="productAddform.submitted">
-                    <div  class="alert alert-danger" *ngIf="price.errors?.['required']">Price is required</div>
-
-                 </div>
-
-                </div>
-                <div class="col-md-6 mb-4  align-items-center">
-                  <h6>Product image</h6>
-                  <div class="form-outline datepicker w-100">
-                    <input type="file" class="form-control form-control-lg"
-                    [(ngModel)]="this.image"  name="image"  #image="ngModel"
-                    (change)="handleImg($event)"
-                    />
                   </div>
 
 
                 </div>
+
 
 
               </div>
@@ -104,7 +83,7 @@
 
 
               <div class="mt-4 pt-2">
-                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                <input class="btn btn-primary btn-lg" type="submit" value="Edit Product" />
               </div>
 
             </form>
@@ -114,4 +93,5 @@
     </div>
   </div>
 </section>
- -->
+
+

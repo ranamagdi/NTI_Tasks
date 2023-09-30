@@ -11,8 +11,9 @@
            <p class="card-body">Arrived at:{{p.dOfArrive}}</p>
            <p class="card-body">${{p.price}}</p>
            <p class="card-body"> category: {{p.category}} </p>
-           <button class="btn btn-success" routerLink="/dashboard/singleusershow/${u._id}"><i class="fa fa-eye"></i></button>
-           <button class="btn btn-danger mx-3" (click)="handelDelete(p._id)"><i class=" fa fa-trash"></i></button>
+           <button class="btn btn-success" routerLink="/dashboard/singleproductshow/{{p._id}}"><i class="fa fa-eye"></i></button>
+           <button class="btn btn-info mx-3" routerLink="/dashboard/singleproductedit/{{p._id}}"><i class="fa fa-pencil"></i></button>
+           <button class="btn btn-danger " (click)="handelDelete(p._id)"><i class=" fa fa-trash"></i></button>
         </div>
       </div>
      </div>

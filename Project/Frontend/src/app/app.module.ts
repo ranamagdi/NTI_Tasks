@@ -31,6 +31,11 @@ import { AddadminComponent } from './pages/auth/Admin/addadmin/addadmin.componen
 import { AddProductComponent } from './pages/auth/Admin/add-product/add-product.component';
 import { ProfileComponent } from './pages/website/profile/profile.component';
 import { ShowSingleUserComponent } from './pages/auth/Admin/show-single-user/show-single-user.component';
+import { ShowSingleProductComponent } from './pages/auth/Admin/show-single-product/show-single-product.component';
+import { SingleProductEditComponent } from './pages/auth/Admin/single-product-edit/single-product-edit.component';
+import { FamilyComponent } from './pages/website/categories/family/family.component';
+import { CookeryComponent } from './pages/website/categories/cookery/cookery.component';
+import { EconomicComponent } from './pages/website/categories/economic/economic.component';
 
 
 
@@ -59,6 +64,11 @@ import { ShowSingleUserComponent } from './pages/auth/Admin/show-single-user/sho
     AddProductComponent,
     ProfileComponent,
     ShowSingleUserComponent,
+    ShowSingleProductComponent,
+    SingleProductEditComponent,
+    FamilyComponent,
+    CookeryComponent,
+    EconomicComponent,
 
 
 
